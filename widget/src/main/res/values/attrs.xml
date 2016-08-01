@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--SwitchButton-->
+    <declare-styleable name="SwitchButton">
+        <attr name="isSelect" format="boolean"/>
+        <attr name="selDrawable" format="reference"/>
+        <attr name="norDrawable" format="reference"/>
+    </declare-styleable>
+    <!--FlowTagLayout-->
+    <declare-styleable name="FlowTagLayout">
+        <attr name="check_mode" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="single" value="1"/>
+            <enum name="multi" value="2"/>
+        </attr>
+        <attr name="background_style" format="integer|reference"/>
+        <attr name="text_color" format="integer|reference|color"/>
+    </declare-styleable>
+    <!--CleanableEditText-->
+    <declare-styleable name="CleanableEditText">
+        <attr name="maxLength" format="integer" />
+    </declare-styleable>
+    <!--BasicRecyclerView-->
+    <declare-styleable name="BasicRecyclerView">
+        <attr name="layout_mode" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+            <enum name="invalid_offset" value="2" />
+            <enum name="grid" value="3" />
+        </attr>
+        <attr name="column_num" format="integer" />
+        <!--间隔线-->
+        <attr name="has_row_divider" format="boolean" />
+        <attr name="has_rank_divider" format="boolean" />
+        <attr name="divider_width" format="dimension" />
+        <attr name="divider_height" format="dimension" />
+        <attr name="divider_marginLeft" format="dimension" />
+        <attr name="divider_marginRight" format="dimension" />
+        <attr name="divider_marginTop" format="dimension" />
+        <attr name="divider_marginBottom" format="dimension" />
+        <attr name="divider_color" format="color" />
+        <!--嵌套-->
+        <attr name="is_inner" format="boolean" />
+        <!--按压效果-->
+        <attr name="is_process" format="boolean" />
+        <attr name="process_background" format="integer|reference" />
+        <!--动画-->
+        <attr name="is_start_animator" format="boolean" />
+        <attr name="is_first_only" format="boolean" />
+        <attr name="duration_animator" format="integer" />
+    </declare-styleable>
+    <!--LoadMoreRecyclerView-->
+    <declare-styleable name="LoadMoreRecyclerView">
+        <attr name="loading_drawable" format="reference" />
+        <attr name="loading_text" format="string" />
+        <attr name="no_more_text" format="string" />
+    </declare-styleable>
+    <!--PullToRefreshLayout-->
+    <declare-styleable name="PullToRefreshLayout">
+        <attr name="refresh_layout" format="reference" />
+        <attr name="refresh_layout_height" format="integer" />
+        <attr name="refresh_prepare_text" format="string|reference" />
+        <attr name="refresh_recycle_text" format="string|reference" />
+        <attr name="refresh_loading_text" format="string|reference" />
+        <attr name="refresh_complete_text" format="string|reference" />
+    </declare-styleable>
+</resources>

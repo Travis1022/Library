@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="recycler_click_sel">#44CCCCCC</color>
+    <color name="recycler_click_nor">@color/white</color>
+</resources>
