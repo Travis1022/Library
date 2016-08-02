@@ -1,8 +1,10 @@
 package com.sunnybear.library.widget;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.TextWatcher;
@@ -46,6 +48,7 @@ public class CleanableEditText extends EditText implements View.OnFocusChangeLis
         a.recycle();
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
     private void init() {
         Drawable[] drawables = getCompoundDrawables();
         mRightDrawable = drawables[2];
