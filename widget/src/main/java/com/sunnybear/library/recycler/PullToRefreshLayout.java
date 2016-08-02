@@ -170,7 +170,7 @@ public class PullToRefreshLayout extends PtrFrameLayout implements PtrUIHandler,
 
     @Override
     public void onUIReset(PtrFrameLayout frame) {
-
+        Logger.d("onUIReset");
     }
 
     @Override
@@ -180,12 +180,12 @@ public class PullToRefreshLayout extends PtrFrameLayout implements PtrUIHandler,
 
     @Override
     public void onUIRefreshBegin(PtrFrameLayout frame) {
-
+        Logger.d("onUIRefreshBegin");
     }
 
     @Override
     public void onUIRefreshComplete(PtrFrameLayout frame) {
-
+        Logger.d("onUIRefreshComplete");
     }
 
     /**
