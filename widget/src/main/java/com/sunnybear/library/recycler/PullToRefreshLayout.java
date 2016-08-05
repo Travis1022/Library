@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.sunnybear.library.util.DensityUtil;
@@ -125,15 +126,22 @@ public class PullToRefreshLayout extends PtrFrameLayout implements PtrUIHandler,
             int firstVisiblePosition = manager.findFirstCompletelyVisibleItemPosition();
             if (firstVisiblePosition == 0 && layout.isScrollTop())
                 return true;
-        }*/ else if (content instanceof FrameLayout) {
-            FrameLayout layout = (FrameLayout) content;
-            RecyclerView recyclerView = (RecyclerView) layout.getChildAt(0);
-            if (recyclerView == null)
-                throw new RuntimeException("第一个view不是RecyclerView");
-            LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
-            int firstVisiblePosition = manager.findFirstCompletelyVisibleItemPosition();
-            if (firstVisiblePosition == 0)
-                return true;
+        }*/ else if (content instanceof ScrollView) {
+//            FrameLayout layout = (FrameLayout) content;
+//            RecyclerView recyclerView = (RecyclerView) layout.getChildAt(0);
+//            if (recyclerView == null)
+//                throw new RuntimeException("第一个view不是RecyclerView");
+//            LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
+//            int firstVisiblePosition = manager.findFirstCompletelyVisibleItemPosition();
+//            if (firstVisiblePosition == 0)
+            return true;
+        } else if (content instanceof FrameLayout) {
+
+            return true;
+        } else if (!(content instanceof RecyclerView ||
+                content instanceof FrameLayout ||
+                content instanceof ScrollView)) {
+            throw new RuntimeException("PullToRefreshLayout中只能放RecyclerView或FrameLayout或ScrollView");
         }
         return false;
     }
